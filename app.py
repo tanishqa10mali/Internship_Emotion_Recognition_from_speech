@@ -1,9 +1,6 @@
-
 import os
-
 import requests
 import streamlit as st
-
 
 # --------------------------------------------------
 # PAGE CONFIGURATION
@@ -14,12 +11,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 
-# Local development fallback; Render uses BACKEND_URL.
-BACKEND_URL = os.getenv(
-    "BACKEND_URL",
-    "http://127.0.0.1:8000",
-).rstrip("/")
-
+# Hardcoded backend URL for instant deployment connection
+BACKEND_URL = "https://internship-emotion-recognition-from.onrender.com"[cite: 2]
 
 # --------------------------------------------------
 # CUSTOM STYLING
@@ -66,7 +59,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
 # --------------------------------------------------
 # HEADER
 # --------------------------------------------------
@@ -94,7 +86,6 @@ st.markdown(
 st.divider()
 
 col1, col2 = st.columns([1.5, 1], gap="large")
-
 
 # --------------------------------------------------
 # AUDIO ANALYZER
@@ -258,7 +249,7 @@ st.markdown(
         text-align: center;
         color: #475569;
     ">
-        Designed and Engineered by Team Inteli6
+        Designed and Engineered by Team Intelli6
     </p>
     """,
     unsafe_allow_html=True,
