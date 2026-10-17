@@ -71,4 +71,4 @@ with col2:
     st.caption("This system listens to **how** you speak, not **what** you say. It analyzes the pitch, rhythm, and tone of the voice to determine the underlying emotional state, completely ignoring the actual dictionary words being spoken. This allows for unbiased and highly accurate emotion detection.")
 
 st.divider()
-st.markdown("<p style='text-align: center; color: #475569;'>Designed and Engineered by Tanishqa Mali</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #475569;'>Designed and Engineered by Team Inteli6</p>", unsafe_allow_html=True)
