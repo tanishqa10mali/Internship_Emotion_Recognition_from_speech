@@ -12,6 +12,11 @@ app = FastAPI(title="Speech Emotion Recognition API")
 model = keras.models.load_model("emotion_model.keras")
 emotion_map = {0: "neutral", 1: "calm", 2: "happy", 3: "sad", 4: "angry", 5: "fearful", 6: "disgust", 7: "surprised"}
 
+# Added root route to resolve the 404 Not Found error on the main Render URL
+@app.get("/")
+def read_root():
+    return {"status": "success", "message": "Speech Emotion Recognition API is running"}
+
 @app.post("/predict")
 async def predict_emotion(file: UploadFile = File(...)):
     start_time = time.time() # Start the latency timer
